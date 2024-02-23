@@ -2,20 +2,14 @@
 
 ## Overview
 
----
-
 This python program is designed to ease the process of shortlisting organizations and selecting from them for Google Summer of Code (GSoC) participation. It scrapes the links of GSoC organizations from a file named `links.txt` and extracts relevant data from their webpages. The extracted data is compiled into an Excel file for convenient review and analysis, aiding users in making informed decisions about which organizations to prioritize during the application process. 
 
 ## Prerequisites
-
----
 
 * Python installed on your system. You can download Python from the official website: [Python Downloads](https://python.org/downloads/)
 * A working version of Google Chrome installed on your computer, as the program utilizes Chrome for web scraping.
 
 ## Usage Instructions
-
----
 
 1. **Clone the Repository:**
     - Clone this repository to your local machine using the following command:
@@ -74,8 +68,6 @@ This python program is designed to ease the process of shortlisting organization
       ```
 
 ## Notes
-
----
 
 - Ensure that the `links.txt` file contains valid URLs of the GSoC organization webpages.
 - Add the links of each organization you're interested in to `links.txt` file so that the program can scrape the relevant data.
