@@ -10,14 +10,11 @@ def format_file(ws):
                     top=Side(border_style='thin', color='000000'),
                     bottom=Side(border_style='thin', color='000000'))
 
-    header_font = Font(bold=True, color='FFFFFF', size=14)
+    header_font = Font(bold=True, color='FFFFFF')
     header_fill = PatternFill(start_color='4A86E8', end_color='4A86E8', fill_type='solid')
     header_alignment = Alignment(horizontal='center', vertical='center')
 
-    cell_font = Font(bold=False, color='000000', size=12)
     cell_alignment = Alignment(horizontal='left', vertical='center')
-
-    link_font = Font(color=BLUE, underline='single', size=12)
 
     for row in ws.iter_rows(min_row=1, max_row=ws.max_row):
         ws.row_dimensions[row[0].row].height = 26.25
@@ -43,8 +40,3 @@ def format_file(ws):
                 cell.alignment = header_alignment
             else:                   # Data rows
                 cell.alignment = cell_alignment
-                if 5 <= cell.column <= 6:
-                    cell.font = link_font
-                    cell.value = f'=HYPERLINK("{cell.value}", "{cell.value}")'
-                else:
-                    cell.font = cell_font
